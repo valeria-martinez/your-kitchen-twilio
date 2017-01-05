@@ -6,15 +6,17 @@
   <img src= '<%=@user.image_link %>' class="profile-image">
 </div>
 
-<div class="bio-container panel-default">
-  <p class="panel-body">
-    placeholder
+<div class="bio-container panel panel-default">
+  <p class=" panel-body bio-body bio-text">
+    <%=@user.bio %> placeholder
   </p>
-  <%= form_for @user, html: {class: "hidden panel-body"} do |f| %>
-    <%= f.text_field :bio %>
+  <%= form_for @user, html: {class: "panel-body bio-body bio-form"} do |f| %>
+    <%= f.text_area :bio, class:"bio-area" %>
+    <%= f.submit 'submit' %>
+
 
   <% end %>
-  <div class="panel-footer">
-    <a href="" class="btn btn-primary btn-xs">Edit Bio</a>
+  <div class="panel-footer bio-footer">
+    <a href="" class="btn btn-primary btn-xs edit-btn">Edit Bio</a>
   </div>
 </div>
