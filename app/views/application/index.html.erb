@@ -6,5 +6,8 @@
    </h1>
 
 </div>
-
-<p>This is a sample text.This is a sample text.This is a sample text. This is a sample text.</p>
+<%if current_user %>
+<%= link_to("Home", current_user)%>
+<%else%>
+<%= render partial: "users/new"%>
+<%end%>
