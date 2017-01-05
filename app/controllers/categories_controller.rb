@@ -1,11 +1,11 @@
-class CategoryController < ApplicationController
+class CategoriesController < ApplicationController
+
   def index
     @categories = Category.all
-    render :"index"
   end
 
   def show
-    @category = Category.find
+    @category = Category.find(params[:id])
     @recipes = Recipe.where(@category)
   end
 
