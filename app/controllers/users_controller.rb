@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  def index
+  end
+
   def new
     @user = User.new
     render :"new"
@@ -8,10 +11,18 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to @user
+      if login(@user.email, @user.password)
+        redirect_to users_url
+      else
+        redirect_to '/'
+      end 
     else
-      render :"new"
+      render "new"
     end
+  end
+
+  def show
+    @user = current_user
   end
 
   private
