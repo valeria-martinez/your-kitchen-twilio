@@ -1,11 +1,14 @@
-<h1>All Categories</h1>
+<div id= "hi">
+<h1 id= "category_title"> All Categories</h1><br><br><br>
 
 <ul id="categories">
   <% @categories.each do |category| %>
     <li>
-      <%= link_to category.name, category_path(category),
-        class: 'category_name', id: "category_#{category.id}" %>
+      <div id="individual_category"> <%= link_to category.name, category_path(category),
+        class: 'category_name', id: "category_#{category.id}" %><%=link_to("See more...", root_path, class:"btn btn-link")%>
+          </div>
     </li>
+
   <% @recipes.each do |recipe| %>
       <% if recipe.category_id == category.id %>
           <%= recipe.title %>
@@ -15,7 +18,7 @@
   <% end %>
 </ul>
 
-
+</div>
 
 
 
