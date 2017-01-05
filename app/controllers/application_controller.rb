@@ -3,7 +3,8 @@ class ApplicationController < ActionController::Base
   helper_method :current_user, :log_in, :log_out
 
   def index
-    unless current_user
+    @user = current_user
+    if @user == nil
       @user = User.new
     end
     render :"index"
