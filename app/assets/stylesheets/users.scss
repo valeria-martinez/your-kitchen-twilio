@@ -1,0 +1,25 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.user-image-container {
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+}
+
+.bio-container {
+  vertical-align: top;
+  display: inline-block;
+  width: 680px;
+}
+.bio-body{
+  height:195px;
+}
+
+.bio-form{
+  display: none;
+}
+
+.bio-area{
+  width: 80%;
+}

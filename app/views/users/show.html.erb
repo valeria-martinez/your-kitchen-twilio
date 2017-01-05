@@ -2,12 +2,21 @@
   <h1><%= @user.username %></h1>
 </div>
 
-<div class="image-container">
+<div class="user-image-container well well-sm">
   <img src= '<%=@user.image_link %>' class="profile-image">
 </div>
 
-<div class="bio-container">
-  <p class='user.bio'>
+<div class="bio-container panel panel-default">
+  <p class=" panel-body bio-body bio-text">
+    <%=@user.bio %> placeholder
+  </p>
+  <%= form_for @user, html: {class: "panel-body bio-body bio-form"} do |f| %>
+    <%= f.text_area :bio, class:"bio-area" %>
+    <%= f.submit 'submit' %>
 
-</p>
+
+  <% end %>
+  <div class="panel-footer bio-footer">
+    <a href="" class="btn btn-primary btn-xs edit-btn">Edit Bio</a>
+  </div>
 </div>
