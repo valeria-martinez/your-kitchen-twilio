@@ -11,11 +11,11 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      if login(@user.email, @user.password)
-        redirect_to users_url
+      if login(@user)
+        redirect_to @user
       else
         redirect_to '/'
-      end 
+      end
     else
       render "new"
     end
