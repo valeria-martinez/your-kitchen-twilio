@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 
     if @user.save
       if log_in(@user)
-        redirect_to users_path
+        redirect_to @user
       else
         redirect_to '/'
       end
