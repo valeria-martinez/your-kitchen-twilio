@@ -13,5 +13,6 @@ var showBioForm = function(){
     e.preventDefault();
     $('.bio-text').hide();
     $('.bio-form').show();
+    $(this).hide();
   })
 };
