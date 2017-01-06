@@ -4,15 +4,19 @@ margin: auto;
 text-align: left;
 }
 
-
 .page-header{
   text-align:center;
   font-weight: bolder;
-  background-color: #d34615;
-  margin: 0;
+  background-color: #e95420;
+  margin-top: 0px;
   top: 0;
   opacity: 1;
   position: static;
+  color: white;
+}
+
+.indexnav {
+  margin-bottom:0px;
 }
 
 .homepanel{
@@ -28,10 +32,11 @@ text-align: left;
 margin-top: 0;
 margin-bottom: 0;
 vertical-align: middle;
+padding-bottom: 0;
 }
 
 #splash {
-  // background-image: url(<%= asset_path 'food.jpg' %>);
+  background-image: image-url('food.jpg');
   position: static;
   height: 100%;
   width: inherit;
@@ -39,5 +44,4 @@ vertical-align: middle;
   opacity: 0.9;
   position: absolute;
   z-index: -1;
-
 }
