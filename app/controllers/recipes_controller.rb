@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   def index
-    #code
+    @recipe
   end
 
   def new

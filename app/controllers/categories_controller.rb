@@ -9,7 +9,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
-    @recipe = Recipe.where(@category)
+    # @recipe = Recipe.where(@category)
   end
 
 end

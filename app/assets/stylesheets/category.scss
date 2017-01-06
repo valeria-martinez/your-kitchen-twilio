@@ -2,13 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+#cat_header {
+  width: 90%;
+}
 
 .individual_category {
-  border-bottom: thin dotted #ff0000;
+  border-bottom: thin solid white;
   font-size: 250%;
   clear:both;
   margin-right: 5px;
+  color: white;
 }
 
 #category_title {
@@ -18,11 +21,13 @@
 #hi {
   border: thin solid #ff0000;
   padding: 50px;
-  background-image: image-url('your-kitchen-image.jpg');
+  background-image: image-url('yo-kitchen.png');
   background-attachment: fixed;
+  position: absolute;
   background-size: cover;
+  opacity: 0.9;
+  width: 960px;
 }
-
 
 .well img {
   max-width: 160px;
