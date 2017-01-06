@@ -1,4 +1,6 @@
-<div class="well bs-component">
+<div>
+
+<div class="recipe-form-contianer well bs-component">
   <%= bootstrap_form_for([@category, @recipe]) do |f| %>
     <legend>
       New Recipe
@@ -12,8 +14,10 @@
     <div class="panel panel-default">
       <div class="panel-heading">Ingredients</div>
       <div class="panel-body ingredient-panel">
-        <%= f.fields_for :ingredients do |ingredient| %>
-          <%= render partial: "ingredients/new", locals: {ingredient: ingredient}  %>
+        <%= f.fields_for :ingredients do |ingredient_form| %>
+        <table class="ingredient-table">
+          <%= render partial: "ingredients/new", locals: {ingredient_form: ingredient_form}  %>
+        </table>
         <% end %>
       </div>
     </div>
@@ -21,4 +25,12 @@
     <%= f.submit %>
 
   <% end %>
+</div>
+
+
+
+
+
+
+
 </div>
