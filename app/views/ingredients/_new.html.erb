@@ -1,0 +1,18 @@
+
+<table class="ingredient-table">
+  <tr>
+
+    <td class="ingredient-name">
+      <%=ingredient.text_field :name %>
+    </td>
+    <td class="ingredient-amount">
+      <%=ingredient.text_field :amount %>
+    </td>
+    <td class="ingredient-measure">
+      <%=ingredient.text_field :measurement, placeholder:"cup, lbs, tbsp" %>
+    </td>
+    <td class="new-button-col">
+      <a href="" class="btn btn-primary btn-xs add-ingredient-button">Add Ingredient</a>
+    </td>
+  </tr>
+</table>

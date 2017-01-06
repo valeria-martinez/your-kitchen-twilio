@@ -6,6 +6,8 @@ class RecipesController < ApplicationController
   def new
     @category = Category.find(params[:category_id])
     @recipe = @category.recipes.new
+    @recipe.ingredients.new
+    @recipe.directions.new
   end
 
   private
