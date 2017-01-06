@@ -2,6 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+body {
+width: 960px;
+margin: auto;
+text-align: left;
+}
+
 #individual_category {
   border-bottom: thin dotted #ff0000;
   font-size: 150%;
@@ -14,5 +21,14 @@
 #hi {
   border: thin solid #ff0000;
   padding: 50px;
+}
 
+.well img {
+  max-width: 25%;
+  max-height: 35%;
+  border-radius: 20px;
+}
+
+.well {
+  border: thin solid #ff0000;
 }

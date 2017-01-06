@@ -1,24 +1,14 @@
 <div id= "hi">
 <h1 id= "category_title"> All Categories</h1><br><br><br>
 
-<ul id="categories">
+<ul>
   <% @categories.each do |category| %>
     <li>
-      <div id="individual_category"> <%= link_to category.name, category_path(category),
-        class: 'category_name', id: "category_#{category.id}" %><%=link_to("See more...", root_path, class:"btn btn-link")%>
-          </div>
-    </li>
-
-  <% @recipes.each do |recipe| %>
-      <% if recipe.category_id == category.id %>
-          <%= recipe.title %>
-      <% end %>
-      <br>
-    <% end %>
+     <%= category.name %><br>
+      </li>
+     </ul>
+ <% category.recipes.each do |recipe| %>
+    <%= render partial: "recipes/card", :locals => {:recipe => recipe}%>
   <% end %>
-</ul>
-
-</div>
-
-
-
+  <br>
+<% end %>
