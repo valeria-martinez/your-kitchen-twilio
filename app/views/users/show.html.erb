@@ -1,10 +1,12 @@
+<div class="hi">
+
 <div class="user-image-container well well-sm">
 <div class='user-header'>
   <h1><%= @user.username %></h1>
 </div>
   <% if @user.image_link == nil && @user == current_user %>
 
-    <%= form_for @user do |f| %>
+    <%= bootstrap_form_for(@user) do |f| %>
       <%= f.label :image_link, class:"col-lg-2 control-label" %>
       <div class="col-lg-10">
         <%= f.text_field :image_link, class:"form-control" %>
@@ -40,4 +42,5 @@
     <%= render partial: "recipes/card", :locals => {:recipe => recipe}%>
   <% end %>
   <br><br>
+</div>
 </div>

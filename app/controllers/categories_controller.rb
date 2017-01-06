@@ -7,6 +7,9 @@ class CategoriesController < ApplicationController
     @recipes = Recipe.all
   end
 
+
+
+
   def show
     @category = Category.find(params[:id])
     # @recipe = Recipe.where(@category)
