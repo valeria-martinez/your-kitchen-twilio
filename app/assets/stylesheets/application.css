@@ -15,45 +15,7 @@
  */
 
 body {
-width: 960px;
-margin: auto;
-text-align: left;
-}
-
-
-.page-header{
-  text-align:center;
-  font-weight: bolder;
-  background-color: #d34615;
-  margin: 0;
-  top: 0;
-  opacity: 1;
-  position: static;
-}
-
-.homepanel{
-  text-align: center;
-  top: 50%;
-  width: 30%;
-  left: 50%;
-  transform: translateX(-50%);
-  position: absolute;
-}
-
-#title {
-margin-top: 0;
-margin-bottom: 0;
-vertical-align: middle;
-}
-
-#splash {
-  background-image: url("food.jpg");
-  position: static;
-  height: 100%;
-  width: inherit;
-  display: block;
-  opacity: 0.9;
-  position: absolute;
-  z-index: -1;
-
+  width: 960px;
+  margin: auto;
+  text-align: left;
 }
