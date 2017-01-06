@@ -15,35 +15,41 @@ Category.create!(name: "Salad")
 Category.create!(name: "Side Dish")
 
 
-Recipe.create!(title: "Mashed potatoes", description: "delicious cake", prep_time: "30 minutes", cook_time: "3 hours", difficulty: "level 10", image_link: "http://i.imgur.com/3P7eSh5.jpg", category_id: 5, user_id: 1)
 
-Recipe.create!(title: "Pizza", description: "delicious cake", prep_time: "30 minutes", cook_time: "1 hours", difficulty: "level 6", image_link: "http://i.imgur.com/VUEGlFp.jpg", category_id: 3, user_id: 1)
-
-Recipe.create!(title: "Chocolate Cake", description: "delicious cake", prep_time: "40 minutes", cook_time: "2 hours", difficulty: "level 2", image_link: "http://i.imgur.com/v24dp92.jpg", category_id: 2, user_id: 1)
-
-Recipe.create!(title: "Garden Salad", description: "delicious cake", prep_time: "40 minutes", cook_time: "2 hours", difficulty: "level 2", image_link: "http://i.imgur.com/rufhsUy.jpg", category_id: 4, user_id: 1)
-
-Recipe.create!(title: "Corn Dip", description: "delicious cake", prep_time: "40 minutes", cook_time: "2 hours", difficulty: "level 2", image_link: "http://i.imgur.com/CW5GHuv.jpg", category_id: 1, user_id: 1)
-
-Recipe.create!(title: "Mashed potatoes", description: "delicious cake", prep_time: "30 minutes", cook_time: "3 hours", difficulty: "level 10", image_link: "http://i.imgur.com/3P7eSh5.jpg", category_id: 5, user_id: 1)
-
-Recipe.create!(title: "Pizza", description: "delicious cake", prep_time: "30 minutes", cook_time: "1 hours", difficulty: "level 6", image_link: "http://i.imgur.com/VUEGlFp.jpg", category_id: 3, user_id: 1)
+Recipe.create!(title: "Corn Dip", description: "delicious corn dip", prep_time: "40 minutes", cook_time: "2 hours", difficulty: "level 2", image_link: "http://i.imgur.com/CW5GHuv.jpg", category_id: 1, user_id: 1)
 
 Recipe.create!(title: "Chocolate Cake", description: "delicious cake", prep_time: "40 minutes", cook_time: "2 hours", difficulty: "level 2", image_link: "http://i.imgur.com/v24dp92.jpg", category_id: 2, user_id: 1)
 
-Recipe.create!(title: "Garden Salad", description: "delicious cake", prep_time: "40 minutes", cook_time: "2 hours", difficulty: "level 2", image_link: "http://i.imgur.com/rufhsUy.jpg", category_id: 4, user_id: 1)
+Recipe.create!(title: "Pizza", description: "delicious pizza", prep_time: "30 minutes", cook_time: "1 hours", difficulty: "level 6", image_link: "http://i.imgur.com/VUEGlFp.jpg", category_id: 3, user_id: 1)
 
-Recipe.create!(title: "Corn Dip", description: "delicious cake", prep_time: "40 minutes", cook_time: "2 hours", difficulty: "level 2", image_link: "http://i.imgur.com/CW5GHuv.jpg", category_id: 1, user_id: 1)
+Recipe.create!(title: "Garden Salad", description: "delicious garden salad", prep_time: "40 minutes", cook_time: "2 hours", difficulty: "level 2", image_link: "http://i.imgur.com/rufhsUy.jpg", category_id: 4, user_id: 1)
+
+Recipe.create!(title: "Mashed potatoes", description: "delicious mashed potatoes", prep_time: "30 minutes", cook_time: "3 hours", difficulty: "level 10", image_link: "http://i.imgur.com/3P7eSh5.jpg", category_id: 5, user_id: 1)
+
+# -----------------
 
 
-Recipe.create!(title: "Mashed potatoes", description: "delicious cake", prep_time: "30 minutes", cook_time: "3 hours", difficulty: "level 10", image_link: "http://i.imgur.com/3P7eSh5.jpg", category_id: 5, user_id: 1)
+Recipe.create!(title: "Butternut Squash With Brussel Sprout Flakes", description: "delicious Thanksgiving side dish", prep_time: "40 minutes", cook_time: "2 hours", difficulty: "level 2", image_link: "http://i.imgur.com/ZQgebYt.jpg?2", category_id: 1, user_id: 1)
 
-Recipe.create!(title: "Pizza", description: "delicious cake", prep_time: "30 minutes", cook_time: "1 hours", difficulty: "level 6", image_link: "http://i.imgur.com/VUEGlFp.jpg", category_id: 3, user_id: 1)
+Recipe.create!(title: "Chocolate Chip Cookie Dough Dip
+", description: "delicious chocolate chip cookie dough dip", prep_time: "40 minutes", cook_time: "2 hours", difficulty: "level 2", image_link: "http://i.imgur.com/bFH4vVe.jpg", category_id: 2, user_id: 1)
+
+Recipe.create!(title: "Skillet Chicken with Creamy Cilantro Lime Sauce", description: "delicious skillet chicken", prep_time: "30 minutes", cook_time: "1 hours", difficulty: "level 6", image_link: "http://i.imgur.com/JSB89us.jpg", category_id: 3, user_id: 1)
+
+Recipe.create!(title: "Steak salad", description: "delicious steak salad", prep_time: "40 minutes", cook_time: "2 hours", difficulty: "level 2", image_link: "http://i.imgur.com/evq3CYJ.jpg", category_id: 4, user_id: 1)
+
+Recipe.create!(title: "Mac & Cheese", description: "delicious Mac & Cheese", prep_time: "30 minutes", cook_time: "3 hours", difficulty: "level 10", image_link: "http://i.imgur.com/eQpYadX.jpg", category_id: 5, user_id: 1)
+
+
+Recipe.create!(title: "Corn Dip", description: "delicious corn dip", prep_time: "40 minutes", cook_time: "2 hours", difficulty: "level 2", image_link: "http://i.imgur.com/CW5GHuv.jpg", category_id: 1, user_id: 1)
 
 Recipe.create!(title: "Chocolate Cake", description: "delicious cake", prep_time: "40 minutes", cook_time: "2 hours", difficulty: "level 2", image_link: "http://i.imgur.com/v24dp92.jpg", category_id: 2, user_id: 1)
 
-Recipe.create!(title: "Garden Salad", description: "delicious cake", prep_time: "40 minutes", cook_time: "2 hours", difficulty: "level 2", image_link: "http://i.imgur.com/rufhsUy.jpg", category_id: 4, user_id: 1)
+Recipe.create!(title: "Pizza", description: "delicious pizza", prep_time: "30 minutes", cook_time: "1 hours", difficulty: "level 6", image_link: "http://i.imgur.com/VUEGlFp.jpg", category_id: 3, user_id: 1)
 
-Recipe.create!(title: "Corn Dip", description: "delicious cake", prep_time: "40 minutes", cook_time: "2 hours", difficulty: "level 2", image_link: "http://i.imgur.com/CW5GHuv.jpg", category_id: 1, user_id: 1)
+Recipe.create!(title: "Garden Salad", description: "delicious garden salad", prep_time: "40 minutes", cook_time: "2 hours", difficulty: "level 2", image_link: "http://i.imgur.com/rufhsUy.jpg", category_id: 4, user_id: 1)
 
-User.create!(username: "valgal", email: "valgal@gmail.com", password: "password", bio: "aspiring chef", image_link: "http://i.imgur.com/3P7eSh5.jpg", )
+Recipe.create!(title: "Mashed potatoes", description: "delicious mashed potatoes", prep_time: "30 minutes", cook_time: "3 hours", difficulty: "level 10", image_link: "http://i.imgur.com/3P7eSh5.jpg", category_id: 5, user_id: 1)
+
+
+User.create!(username: "valgal", email: "valgal@gmail.com", password: "cookie", bio: "aspiring chef", image_link: "https://avatars0.githubusercontent.com/u/15183836?v=3&s=460",)
