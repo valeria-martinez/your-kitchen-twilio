@@ -3,8 +3,6 @@ class ApplicationController < ActionController::Base
   helper_method :current_user, :log_in, :log_out
 
   def index
-    p "$" * 50
-    p session
     @user = current_user
     if @user == nil
       @user = User.new
