@@ -27,4 +27,12 @@ class ApplicationController < ActionController::Base
     session.clear
   end
 
+  def require_login
+    unless session[:user_id] && User.find(session[:user_id])
+      redirect_to root_path
+      return false
+    end
+  end
+
+
 end

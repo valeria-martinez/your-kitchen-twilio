@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_filter :require_login, except: [:create, :new]
+
   def index
   end
 
@@ -23,6 +25,17 @@ class UsersController < ApplicationController
   def show
     p params
     @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+
+    if @user.update(user_params)
+      redirect_to @user
+    else
+      flash[:notice]= "unable to save changes"
+      redirect_to @user
+    end
   end
 
   private
