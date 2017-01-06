@@ -1,3 +1,18 @@
 // Place all the styles related to the Category controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#individual_category {
+  border-bottom: thin dotted #ff0000;
+  font-size: 150%;
+}
+
+#category_title {
+  font-size: 350%;
+}
+
+#hi {
+  border: thin solid #ff0000;
+  padding: 50px;
+
+}
