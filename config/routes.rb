@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'users/show'
 
-  get 'users/new'
+  get '/sessions/new' => 'sessions#new'
+  post '/sessions' => 'sessions#create'
+  get '/sessions' => 'sessions#destroy'
 
   root to: 'application#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
