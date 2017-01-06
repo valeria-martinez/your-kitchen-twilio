@@ -5,11 +5,11 @@
   <h1 id= "cat_header" class= "individual_category"><%= @category.name %><%=link_to(" << Back to all Categories...", categories_path, class:"btn btn-link")%></h1>
 
   <% @category.recipes.each do |recipe| %>
-    <%= render partial: "recipes/card", :locals => {:recipe => recipe}%>
+    <%= render partial: "recipes/card", :locals => {:recipe => recipe, :category => category}%>
   <% end %>
   <br><br>
 
-   <a href="recipes#new" class="btn btn-primary btn-xs add-ingredient-button">Add a Recipe</a>
+   <a href="recipes#new" class="btn btn-primary btn-xs add-recipe-button">Add a Recipe</a>
 
   </div>
 
