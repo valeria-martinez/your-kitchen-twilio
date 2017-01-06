@@ -28,6 +28,19 @@ class RecipesController < ApplicationController
   def edit
     @category = Category.find(params[:category_id])
     @recipe = Recipe.find(params[:id])
+    @ingredient = @recipe.ingredients.new
+    @direction = @recipe.directions.new
+  end
+
+  def update
+    @recipe = Recipe.find(param[:id])
+    @category = Category.find(params[:id])
+
+    if @recipe.update(recipes_params)
+      redirect_to @article
+    else
+      render 'edit'
+    end
   end
 
   private
