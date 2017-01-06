@@ -1,0 +1,15 @@
+  <h1 id= "recipe_header" class= "individual_recipe"><%= @recipe.name %><%=link_to(" << Back to all Categories...", categories_path, class:"btn btn-link")%></h1>
+
+  <% @recipe.each do |recipe| %>
+    <%= recipe.title%>
+    <%= recipe.description%>
+    <%= recipe.prep_time%>
+    <%= recipe.cook_time%>
+    <%= recipe.difficulty%>
+  <% end %>
+  <br><br>
+
+
+  </div>
+
+
