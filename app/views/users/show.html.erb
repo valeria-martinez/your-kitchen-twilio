@@ -3,20 +3,34 @@
 </div>
 
 <div class="user-image-container well well-sm">
+  <% if @user.image_link == nil && @user == current_user %>
+    <%= form_for @user do |f| %>
+      <%= f.label :image_link, class:"col-lg-2 control-label" %>
+      <div class="col-lg-10">
+        <%= f.text_field :image_link, class:"form-control" %>
+      </div>
+      <%= f.submit class:"btn btn-primary" %>
+    <% end %>
+  <% end %>
   <img src= '<%=@user.image_link %>' class="profile-image">
 </div>
 
 <div class="bio-container panel panel-default">
   <p class=" panel-body bio-body bio-text">
-    <%=@user.bio %> placeholder
+    <%=@user.bio %>
   </p>
-  <%= form_for @user, html: {class: "panel-body bio-body bio-form"} do |f| %>
-    <%= f.text_area :bio, class:"bio-area" %>
-    <%= f.submit 'submit' %>
+  <% if @user == current_user %>
+    <%= form_for @user, html: {class: "panel-body bio-body bio-form"} do |f| %>
+      <%= f.label :bio %>
+      <%= f.text_area :bio, class:" form-control bio-area" %>
+      <%= f.submit 'submit', class:"btn btn-primary" %>
 
 
-  <% end %>
-  <div class="panel-footer bio-footer">
-    <a href="" class="btn btn-primary btn-xs edit-btn">Edit Bio</a>
-  </div>
+    <% end %>
+
+    <div class="panel-footer bio-footer">
+      <a href="" class="btn btn-primary btn-xs edit-btn">Edit Bio</a>
+    </div>
+
+  <%end%>
 </div>
