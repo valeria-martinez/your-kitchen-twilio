@@ -3,11 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-body {
-width: 960px;
-margin: auto;
-text-align: left;
-}
 
 .individual_category {
   border-bottom: thin dotted #ff0000;
@@ -23,7 +18,11 @@ text-align: left;
 #hi {
   border: thin solid #ff0000;
   padding: 50px;
+  background-image: image-url('your-kitchen-image.jpg');
+  background-attachment: fixed;
+  background-size: cover;
 }
+
 
 .well img {
   max-width: 160px;
