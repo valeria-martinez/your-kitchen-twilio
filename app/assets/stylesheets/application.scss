@@ -31,7 +31,7 @@ vertical-align: middle;
 }
 
 #splash {
-  background-image: url(<%= asset_path 'food.jpg' %>);
+  // background-image: url(<%= asset_path 'food.jpg' %>);
   position: static;
   height: 100%;
   width: inherit;
