@@ -33,11 +33,11 @@ class RecipesController < ApplicationController
   end
 
   def update
-    @recipe = Recipe.find(param[:id])
-    @category = Category.find(params[:id])
+    @recipe = Recipe.find(params[:id])
+    @category = Category.find(params[:category_id])
 
     if @recipe.update(recipes_params)
-      redirect_to @article
+      redirect_to category_recipe_path(@category, @recipe)
     else
       render 'edit'
     end

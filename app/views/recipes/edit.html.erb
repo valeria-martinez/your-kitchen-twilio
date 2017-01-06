@@ -1,3 +1,4 @@
+<h1>Edit Recipe and add Ingredients and Directions</h1>
 <div class="recipe-form-contianer well bs-component">
   <%= bootstrap_form_for([@category, @recipe]) do |f| %>
     <legend>
@@ -7,10 +8,37 @@
     <%= f.text_area :description, placeholder:"max 140 characters" %>
     <%= f.text_field :prep_time %>
     <%= f.text_field :cook_time %>
-    <%= f.text_field :difficulty %>
+    <%= f.text_field :difficulty, placeholder:"1-10" %>
     <%= f.text_field :image_link %>
+    <%= f.submit "view recipe" %>
+    <% end %>
 
-    <%= f.submit %>
 
-  <% end %>
+    <div class="panel panel-default">
+      <div class="panel-heading">Ingredients</div>
+      <div class="panel-body ingredient-panel">
+        <table class="ingredient-table">
+          <% @recipe.ingredients.each do |ingredient| %>
+            <%= bootstrap_form_for ([@category, @recipe, ingredient]) do |ingredient_form| %>
+            <tr class=".ingredient-row">
+              <td class="ingredient-name">
+                <%=ingredient_form.text_field :name %>
+              </td>
+              <td class="ingredient-amount">
+                <%=ingredient_form.text_field :amount %>
+              </td>
+              <td class="ingredient-measure">
+                <%=ingredient_form.text_field :measurement, placeholder:"cup, lbs, tbsp" %>
+              </td>
+              <td class="new-button-col">
+                <%=ingredient_form.submit  %>
+              </td>
+            </tr>
+            <% end %>
+          <% end %>
+        </table>
+      </div>
+    </div>
+
+
 </div>
