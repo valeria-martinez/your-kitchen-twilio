@@ -2,9 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#individual_category {
+
+
+.individual_category {
   border-bottom: thin dotted #ff0000;
-  font-size: 150%;
+  font-size: 250%;
+  clear:both;
+  margin-right: 5px;
 }
 
 #category_title {
@@ -14,5 +18,25 @@
 #hi {
   border: thin solid #ff0000;
   padding: 50px;
-
+  background-image: image-url('your-kitchen-image.jpg');
+  background-attachment: fixed;
+  background-size: cover;
 }
+
+
+.well img {
+  max-width: 160px;
+  border-radius: 20px;
+  float: left;
+  padding: 10px;
+}
+
+.well.well-lg {
+  width: 40%;
+  height: 40%;
+  display: inline-block;
+  float: left;
+  margin: 10px;
+}
+
+
