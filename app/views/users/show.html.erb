@@ -4,7 +4,7 @@
 </div>
   <% if @user.image_link == nil && @user == current_user %>
 
-    <%= form_for @user do |f| %>
+    <%= bootstrap_form_for(@user) do |f| %>
       <%= f.label :image_link, class:"col-lg-2 control-label" %>
       <div class="col-lg-10">
         <%= f.text_field :image_link, class:"form-control" %>
