@@ -4,13 +4,11 @@ class SessionsController < ApplicationController
   end
 
   def create
-    p "$" * 100
-    p @user = User.where(username: user_params[:username])
-    p session
-    if User.password = user_params[:password]
-      log_in(@user)
+    if login(user_params[:email], user_params[:password])
+      redirect_to "/categories#index"
     else
-      "sessions#new"
+      flash.now.alert = "Login failed."
+      redirect_to "/"
     end
   end
 
@@ -21,7 +19,7 @@ class SessionsController < ApplicationController
 
   private
   def user_params
-    params.require(:session).permit(:username, :password)
+    params.require(:session).permit(:email, :password)
   end
 
 
