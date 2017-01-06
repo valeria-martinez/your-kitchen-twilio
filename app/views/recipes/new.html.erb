@@ -4,9 +4,21 @@
       New Recipe
     </legend>
     <%= f.text_field :title%>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, placeholder:"max 140 characters" %>
     <%= f.text_field :prep_time %>
     <%= f.text_field :cook_time %>
     <%= f.text_field :difficulty %>
+    <%= f.text_field :image_link %>
+    <div class="panel panel-default">
+      <div class="panel-heading">Ingredients</div>
+      <div class="panel-body ingredient-panel">
+        <%= f.fields_for :ingredients do |ingredient| %>
+          <%= render partial: "ingredients/new", locals: {ingredient: ingredient}  %>
+        <% end %>
+      </div>
+    </div>
+
+    <%= f.submit %>
+
   <% end %>
 </div>

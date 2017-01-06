@@ -1,4 +1,4 @@
-class Category < ApplicationRecord
+class Ingredient < ApplicationRecord
   belongs_to :recipe
-  
+
 end
