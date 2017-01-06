@@ -35,7 +35,9 @@
   <%end%>
 </div>
 
+<div id= "user-recipes">
   <% @user.recipes.each do |recipe| %>
     <%= render partial: "recipes/card", :locals => {:recipe => recipe}%>
   <% end %>
   <br><br>
+</div>

@@ -32,8 +32,8 @@
 }
 
 .well img {
-  max-height: 180px;
-  width: 180px;
+  max-height: 150px;
+  max-width: 180px;
   border-radius: 15px;
   border: 10px;
   padding: 10px;
@@ -41,12 +41,15 @@
 }
 
 .well.well-lg {
-  width: 31%;
-  height: 71%;
+  width: 250px;
+  height: 310px;
   display: inline-block;
   float: left;
   margin: 10px;
   text-align:center;
 }
 
-
+#user-recipes {
+  align-items: center;
+  margin-left: 60px;
+}
