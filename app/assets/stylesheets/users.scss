@@ -18,8 +18,12 @@
 
 .bio-form{
   display: none;
+  height: 225px
 }
 
-.bio-area{
-  width: 80%;
+.profile-image{
+  width: auto;
+  height : auto;
+  max-height: 100%;
+  max-width: 100%;
 }
