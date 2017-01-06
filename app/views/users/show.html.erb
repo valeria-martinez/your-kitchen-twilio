@@ -1,9 +1,9 @@
+<div class="user-image-container well well-sm">
 <div class='user-header'>
   <h1><%= @user.username %></h1>
 </div>
-
-<div class="user-image-container well well-sm">
   <% if @user.image_link == nil && @user == current_user %>
+
     <%= form_for @user do |f| %>
       <%= f.label :image_link, class:"col-lg-2 control-label" %>
       <div class="col-lg-10">
