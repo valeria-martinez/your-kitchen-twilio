@@ -1,1 +1,12 @@
-  <%= @category.name %>
+  <div class= "hi">
+  <h1 id= "cat_header" class= "individual_category"><%= @category.name %><%=link_to(" << Back to all Categories...", categories_path, class:"btn btn-link")%></h1>
+
+  <% @category.recipes.each do |recipe| %>
+  <%= render partial: "recipes/card", :locals => {:recipe => recipe}%>
+  <% end %>
+  <br><br>
+
+
+  </div>
+
+
