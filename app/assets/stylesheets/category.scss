@@ -2,41 +2,54 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+#cat_header {
+  width: 90%;
+  margin-left: 45px;
+}
 
 .individual_category {
-  border-bottom: thin dotted #ff0000;
+  border-bottom: thin solid white;
   font-size: 250%;
   clear:both;
   margin-right: 5px;
+  color: white;
+
 }
 
 #category_title {
   font-size: 350%;
 }
 
-#hi {
+.hi{
   border: thin solid #ff0000;
   padding: 50px;
-  background-image: image-url('your-kitchen-image.jpg');
+  background-image: image-url('yo-kitchen.png');
   background-attachment: fixed;
+  position: absolute;
   background-size: cover;
+  opacity: 0.9;
+  width: 960px;
 }
 
-
 .well img {
-  max-width: 160px;
-  border-radius: 20px;
-  float: left;
+  max-height: 150px;
+  max-width: 180px;
+  border-radius: 15px;
+  border: 10px;
   padding: 10px;
+  align-items: center;
 }
 
 .well.well-lg {
-  width: 40%;
-  height: 40%;
+  width: 250px;
+  height: 310px;
   display: inline-block;
   float: left;
   margin: 10px;
+  text-align:center;
 }
 
-
+#user-recipes {
+  align-items: center;
+  margin-left: 60px;
+}

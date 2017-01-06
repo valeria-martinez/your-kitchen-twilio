@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   def index
-    #code
+    @recipe
   end
 
   def new
@@ -8,6 +8,8 @@ class RecipesController < ApplicationController
     @recipe = @category.recipes.new
     @recipe.ingredients.new
     @recipe.directions.new
+
+    p BootstrapForm::FormBuilder.new(:recipe, @recipe, self, {})
   end
 
   private

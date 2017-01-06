@@ -1,13 +1,14 @@
-<div id= "hi">
-<h1 id= "category_title"> All Categories</h1><br><br><br>
+<div class= "hi">
+  <%=image_tag 'all_categories_final.png', class: 'example-class', id: 'cat_header'%> <br><br><br><br>
 
 
   <% @categories.each do |category| %>
-     <div class="individual_category"><%= category.name %><%=link_to("See more...", root_path, class:"btn btn-link")%></div>
-<br><br>
+     <div class="individual_category"><%= category.name %><%= link_to("See more...", category_path(category), class:"btn btn-link") %>
 
- <% category.recipes.each do |recipe| %>
-    <%= render partial: "recipes/card", :locals => {:recipe => recipe}%>
-  <% end %>
+  </div><br><br>
+      <% top_recipes = category.recipes[0..2] %>
+      <% top_recipes.each do |recipe| %>
+        <%= render partial: "recipes/card", :locals => {:recipe => recipe}%>
+      <% end %>
 
 <% end %>

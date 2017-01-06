@@ -1,14 +1,14 @@
 class SessionsController < ApplicationController
   def new
-    redirect_to "categories#index"
+    render partial: "/sessions/new"
   end
 
   def create
-    @user = User.find_by(session_params[:username])
-    if User.password = session_prarams[:password]
-      log_in(@user)
+    if login(user_params[:email], user_params[:password])
+      redirect_to "/categories#index"
     else
-      "sessions#new"
+      flash.now.alert = "Login failed."
+      redirect_to "/"
     end
   end
 
@@ -18,8 +18,8 @@ class SessionsController < ApplicationController
   end
 
   private
-  def session_params
-    params.require(:session).permit(:username, :password)
+  def user_params
+    params.require(:session).permit(:email, :password)
   end
 
 
