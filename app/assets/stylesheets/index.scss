@@ -4,7 +4,6 @@ margin: auto;
 text-align: left;
 }
 
-
 .page-header{
   text-align:center;
   font-weight: bolder;
@@ -31,7 +30,7 @@ vertical-align: middle;
 }
 
 #splash {
-  // background-image: url(<%= asset_path 'food.jpg' %>);
+  background-image: image-url('food.jpg');
   position: static;
   height: 100%;
   width: inherit;
@@ -39,5 +38,4 @@ vertical-align: middle;
   opacity: 0.9;
   position: absolute;
   z-index: -1;
-
 }
