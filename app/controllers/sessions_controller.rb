@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def new
-    redirect_to "categories#index"
+    render partial: "/sessions/new"
   end
 
   def create

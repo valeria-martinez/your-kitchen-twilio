@@ -1,0 +1,20 @@
+<div class="panel panel-primary homepanel">
+  <div class="panel-heading">
+    <h3 class="panel-title">Login!</h3>
+  </div>
+  <div class="panel-body">
+    <%= form_for :session, url: sessions_path do |f| %>
+    <p>
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+    </p>
+    <p>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+    </p>
+    <p>
+    <%= f.submit %>
+    </p>
+    <% end %>
+  </div>
+</div>
