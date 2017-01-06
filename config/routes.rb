@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get '/sessions/new' => 'sessions#new'
   post '/sessions' => 'sessions#create'
-  get '/sessions' => 'sessions#destroy'
+  get '/sessions/destroy' => 'sessions#destroy'
 
   get '/ingredients/new' => 'ingredients#new'
 

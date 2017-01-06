@@ -1,11 +1,13 @@
 class SessionsController < ApplicationController
   def new
-    redirect_to "categories#index"
+    render partial: "/sessions/new"
   end
 
   def create
-    @user = User.find_by(session_params[:username])
-    if User.password = session_prarams[:password]
+    p "$" * 100
+    p @user = User.where(username: user_params[:username])
+    p session
+    if User.password = user_params[:password]
       log_in(@user)
     else
       "sessions#new"
@@ -18,7 +20,7 @@ class SessionsController < ApplicationController
   end
 
   private
-  def session_params
+  def user_params
     params.require(:session).permit(:username, :password)
   end
 
