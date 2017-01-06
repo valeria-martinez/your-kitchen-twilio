@@ -1,14 +1,13 @@
 <div id= "hi">
 <h1 id= "category_title"> All Categories</h1><br><br><br>
 
-<ul>
+
   <% @categories.each do |category| %>
-    <li>
-     <%= category.name %><br>
-      </li>
-     </ul>
+     <div class="individual_category"><%= category.name %><%=link_to("See more...", root_path, class:"btn btn-link")%></div>
+<br><br>
+
  <% category.recipes.each do |recipe| %>
     <%= render partial: "recipes/card", :locals => {:recipe => recipe}%>
   <% end %>
-  <br>
+
 <% end %>
