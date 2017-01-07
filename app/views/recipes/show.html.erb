@@ -1,11 +1,13 @@
-<br>
+<div class="hi">
 <div class="panel panel-primary">
 <ul>
+<br>
+<img class="card-img-top" id="pic-rec" src="<%=@recipe.image_link%>" alt="<%=@recipe.title%>">
+<li>Description: <%= @recipe.description %>
+<li>Prep time: <%= @recipe.prep_time %>
+<li>Cook time: <%= @recipe.cook_time %>
+<li>Difficulty: <%= @recipe.difficulty %>
 
-<li><%= @recipe.description %>
-<li><%= @recipe.prep_time %>
-<li><%= @recipe.cook_time %>
-<li><%= @recipe.difficulty %>
-<li><%= @recipe.image_link %>
 </ul>
+</div>
 </div>

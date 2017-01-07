@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Category.delete_all
+Recipe.delete_all
+User.delete_all
+Ingredient.delete_all
 
 Category.create!(name: "Appetizer")
 Category.create!(name: "Dessert")
@@ -53,3 +56,56 @@ Recipe.create!(title: "Mashed potatoes", description: "delicious mashed potatoes
 
 
 User.create!(username: "valgal", email: "valgal@gmail.com", password: "cookie", bio: "aspiring chef", image_link: "https://avatars0.githubusercontent.com/u/15183836?v=3&s=460",)
+# ---------
+
+
+Ingredient.create!(name: "flour", amount: "4", measurement: "cups", recipe_id: rand(1..14))
+
+Ingredient.create!(name: "milk", amount: "7", measurement: "gallon", recipe_id: rand(1..14))
+
+Ingredient.create!(name: "pepper", amount: "10", measurement: "tablespoon", recipe_id: rand(1..14))
+
+Ingredient.create!(name: "paprika", amount: "valgal@gmail.com", measurement: "cups", recipe_id: rand(1..14))
+
+Ingredient.create!(name: "cilantro", amount: "100", measurement: ".oz", recipe_id: rand(1..14))
+
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
+Ingredient.create!(name: "chicken", amount: "10", measurement: "pounds", recipe_id: rand(1..14))
