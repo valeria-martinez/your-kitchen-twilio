@@ -1,13 +1,13 @@
-class IngredientsController < ApplicationController
+class DirectionsController < ApplicationController
   def new
   end
 
   def create
-    @category = Category.find(params[:category_id])
+    @category= Category.find(params[:category_id])
     @recipe = Recipe.find(params[:recipe_id])
-    @ingredient = @recipe.ingredients.new(ingredients_params)
+    @direction = @recipe.directions.new(directions_params)
 
-    if @ingredient.save
+    if @direction.save
       redirect_to edit_category_recipe_path(@category, @recipe)
     else
       render 'recipes/edit'
@@ -17,17 +17,19 @@ class IngredientsController < ApplicationController
   def update
     @category = Category.find(params[:category_id])
     @recipe = Recipe.find(params[:recipe_id])
-    @ingredient = Ingredient.find(params[:id])
-    p ingredients_params
-    if @ingredient.update(ingredients_params)
+    @direction = Direction.find(params[:id])
+
+    if @direction.update(directions_params)
       redirect_to edit_category_recipe_path(@category, @recipe)
     else
       render 'recipes/edit'
     end
   end
 
+
+
   private
-    def ingredients_params
-      params.require(:ingredient).permit(:name, :amount, :measurement)
+    def directions_params
+      params.require(:direction).permit(:body)
     end
 end
