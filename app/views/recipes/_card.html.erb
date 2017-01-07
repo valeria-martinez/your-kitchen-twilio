@@ -3,8 +3,10 @@
   <img class="card-img-top" src="<%=recipe.image_link%>" alt="<%=recipe.title%>">
   <div class="card-block">
     <p class="card-text"><%=recipe.description%></p>
+     Created by: @<%=recipe.user.username%> <br>
   </div>
   <div class="card-block">
     <a href="/categories/<%=recipe.category_id%>/recipes/<%=recipe.id%>" class="card-link">Check it out!</a>
   </div>
+
 </div>
