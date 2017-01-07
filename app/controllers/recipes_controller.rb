@@ -34,8 +34,10 @@ class RecipesController < ApplicationController
   def edit
     @category = Category.find(params[:category_id])
     @recipe = Recipe.find(params[:id])
-    @ingredient = @recipe.ingredients.new
-    @direction = @recipe.directions.new
+    @ingredients = @recipe.ingredients.sort_by{|ingredient| ingredient.id }
+    @directions = @recipe.directions.sort_by{|direction| direction.id }
+    @ingredients << @recipe.ingredients.new
+    @directions << @recipe.directions.new
   end
 
   def update
