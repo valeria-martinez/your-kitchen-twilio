@@ -13,12 +13,12 @@
     <%= f.submit "view recipe" %>
     <% end %>
 
-
+    <br />
     <div class="panel panel-default">
       <div class="panel-heading">Ingredients</div>
       <div class="panel-body ingredient-panel">
         <table class="ingredient-table">
-          <% @recipe.ingredients.each do |ingredient| %>
+          <% @ingredients.each do |ingredient| %>
             <%= bootstrap_form_for ([@category, @recipe, ingredient]) do |ingredient_form| %>
             <tr class=".ingredient-row">
               <td class="ingredient-name">
@@ -36,6 +36,22 @@
             </tr>
             <% end %>
           <% end %>
+        </table>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">Directions</div>
+      <div class="panel-body direction-panel">
+        <ol>
+          <% @directions.each do |direction| %>
+            <%= bootstrap_form_for ([@category, @recipe, direction]) do |direction_form| %>
+              <li>
+                  <%=direction_form.text_area :body, class:"body-text-area" %>
+                  <%=direction_form.submit  %>
+              </li>
+            <% end %>
+          <% end %>
+        </ol>
         </table>
       </div>
     </div>
