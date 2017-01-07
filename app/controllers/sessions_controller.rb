@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     if login(user_params[:email], user_params[:password])
       redirect_to "/categories#index"
     else
-      flash.now.alert = "Login failed."
+      flash[:notice] = "Email or Password is incorrect."
       redirect_to "/"
     end
   end

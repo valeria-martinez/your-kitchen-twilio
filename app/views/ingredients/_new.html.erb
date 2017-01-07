@@ -1,16 +1,23 @@
-
-<tr class=".ingredient-row">
-  <td class="ingredient-name">
-    <%=ingredient_form.text_field :name %>
-
-  </td>
-  <td class="ingredient-amount">
-    <%=ingredient_form.text_field :amount %>
-  </td>
-  <td class="ingredient-measure">
-    <%=ingredient_form.text_field :measurement, placeholder:"cup, lbs, tbsp" %>
-  </td>
-  <td class="new-button-col">
-    <a href="" class="btn btn-primary btn-xs add-ingredient-button">Add Ingredient</a>
-  </td>
-</tr>
+<div class="panel panel-default">
+  <div class="panel-heading">Ingredients</div>
+  <div class="panel-body ingredient-panel">
+    <%= form_for ([category, recipe, ingredient]) do |ingredient_form| %>
+    <table class="ingredient-table">
+      <tr class=".ingredient-row">
+        <td class="ingredient-name">
+          <%=ingredient_form.text_field :name %>
+        </td>
+        <td class="ingredient-amount">
+          <%=ingredient_form.text_field :amount %>
+        </td>
+        <td class="ingredient-measure">
+          <%=ingredient_form.text_field :measurement, placeholder:"cup, lbs, tbsp" %>
+        </td>
+        <td class="new-button-col">
+          <%=ingredient_form.submit 'add ingredient' %>
+        </td>
+      </tr>
+    </table>
+    <% end %>
+  </div>
+</div>
