@@ -1,0 +1,6 @@
+<%= bootstrap_form_for [category, recipe, direction], remote:true do |direction_form| %>
+  <li>
+      <%=direction_form.text_area :body, class:"body-text-area" %>
+      <%=direction_form.submit  %>
+  </li>
+<% end %>

@@ -8,7 +8,10 @@ class DirectionsController < ApplicationController
     @direction = @recipe.directions.new(directions_params)
 
     if @direction.save
-      redirect_to edit_category_recipe_path(@category, @recipe)
+      respond_to do |format|
+        format.js {}
+        format.html {redirect_to edit_category_recipe_path(@category, @recipe)}
+      end
     else
       render 'recipes/edit'
     end

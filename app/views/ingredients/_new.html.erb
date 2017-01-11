@@ -1,23 +1,18 @@
-<div class="panel panel-default">
-  <div class="panel-heading">Ingredients</div>
-  <div class="panel-body ingredient-panel">
-    <%= form_for ([category, recipe, ingredient]) do |ingredient_form| %>
-    <table class="ingredient-table">
-      <tr class=".ingredient-row">
-        <td class="ingredient-name">
-          <%=ingredient_form.text_field :name %>
-        </td>
-        <td class="ingredient-amount">
-          <%=ingredient_form.text_field :amount %>
-        </td>
-        <td class="ingredient-measure">
-          <%=ingredient_form.text_field :measurement, placeholder:"cup, lbs, tbsp" %>
-        </td>
-        <td class="new-button-col">
-          <%=ingredient_form.submit 'add ingredient' %>
-        </td>
-      </tr>
-    </table>
+
+<tr class=".ingredient-row">
+<%= bootstrap_form_for [category, recipe, ingredient], remote:true do |ingredient_form| %>
+
+    <td class="ingredient-name">
+      <%=ingredient_form.text_field :name %>
+    </td>
+    <td class="ingredient-amount">
+      <%=ingredient_form.text_field :amount %>
+    </td>
+    <td class="ingredient-measure">
+      <%=ingredient_form.text_field :measurement, placeholder:"cup, lbs, tbsp" %>
+    </td>
+    <td class="new-button-col">
+      <%=ingredient_form.submit 'add ingredient' %>
+    </td>
     <% end %>
-  </div>
-</div>
+  </tr>
