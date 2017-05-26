@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+
+  get '/send_message' => 'recipes#send_message'
   get '/sessions/new' => 'sessions#new'
   post '/sessions' => 'sessions#create'
   get '/sessions/destroy' => 'sessions#destroy'
