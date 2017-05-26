@@ -3,6 +3,12 @@
 
 <h1 id= "cat_header" class= "individual_category"><%= @category.name %><%=link_to(" << Back to all Categories...", categories_path, class:"btn btn-link")%></h1>
 
+
+
+<%= link_to send_message_path, class: "bot-marg waves-effect waves-light btn fontcol" do %>
+    SEND MESSAGE
+<% end %>
+
 <h1><%=@recipe.title %></h1>
 
 <img class="card-img-top" id="pic-rec" src="<%=@recipe.image_link%>" alt="<%=@recipe.title%>"><br>
@@ -33,6 +39,7 @@ Difficulty: <%= @recipe.difficulty %><br>
      <li><div class="individual_direction"><%= direction.body %>
       <%end%>
 </div>
+
 </ol>
 
 

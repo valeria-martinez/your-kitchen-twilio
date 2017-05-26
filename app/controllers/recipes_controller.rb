@@ -1,13 +1,49 @@
+require 'rubygems' # not necessary with ruby 1.9 but included for completeness
+require 'twilio-ruby'
+require 'dotenv/load'
+
+
 class RecipesController < ApplicationController
   def index
     @recipe
   end
 
+  def send_message
+    account_sid = ENV['ACCOUNT_SID1']
+    auth_token = ENV['AUTH_TOKEN1']
+
+# set up a client to talk to the Twilio REST API
+    @client = Twilio::REST::Client.new account_sid, auth_token
+
+    @client.account.messages.create(
+      from: ENV['PHONE_ID'],
+      to: ENV['PHONE_ID2'],
+      body: $recipe_info
+    )
+  end
+
+
+
   def show
     @category = Category.find(params[:category_id])
     @recipe = Recipe.find(params[:id])
     category_id = @recipe.category_id
+
+    @ingredient_names = []
+    @direction_bodies = []
+
+    @recipe.ingredients.each do |ingredient|
+      @ingredient_names << ingredient.name
+    end
+
+    @recipe.directions.each do |direction|
+      @direction_bodies << direction.body
+    end
+
+    $recipe_info = "The recipe ~#{@recipe.title}~ is #{@recipe.description}, takes #{@recipe.prep_time} to prepare, and #{@recipe.cook_time} to cook. The ingredients are #{@ingredient_names}. The directions are #{@direction_bodies} "
   end
+
+
 
 
   def new
