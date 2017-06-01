@@ -1,44 +1,47 @@
 <div class="hi">
-<div class="panel panel-primary">
+  <div class="panel panel-primary">
 
-<h1 id= "cat_header" class= "individual_category"><%= @category.name %><%=link_to(" << Back to all Categories...", categories_path, class:"btn btn-link")%></h1>
+  <h1 id= "cat_header" class= "individual_category"><%= @category.name %><%=link_to(" << Back to all Categories...", categories_path, class:"btn btn-link")%></h1>
 
 
-<%= link_to send_message_path, class: "btn btn-primary" do %>
-      SEND RECIPE AS TEXT
-  <% end %>
+  <!--
+  currently sends to only my verified phone number since using twilio trial -->
+  <%= link_to send_message_path, class: "btn btn-primary" do %>
+        SEND RECIPE AS TEXT
+    <% end %>
 
-<h1><%=@recipe.title %></h1>
+  <h1><%=@recipe.title %></h1>
 
-<img class="card-img-top" id="pic-rec" src="<%=@recipe.image_link%>" alt="<%=@recipe.title%>"><br>
-Description: <%= @recipe.description %><br>
-Prep time: <%= @recipe.prep_time %><br>
-Cook time: <%= @recipe.cook_time %><br>
-Difficulty: <%= @recipe.difficulty %><br>
+  <img class="card-img-top" id="pic-rec" src="<%=@recipe.image_link%>" alt="<%=@recipe.title%>"><br>
+  Description: <%= @recipe.description %><br>
+  Prep time: <%= @recipe.prep_time %><br>
+  Cook time: <%= @recipe.cook_time %><br>
+  Difficulty: <%= @recipe.difficulty %><br>
 
-<div class="rex well well-lg">
-<h1> Ingredients </h1>
-  <% @recipe.ingredients.each do |ingredient| %>
-     <div class="individual_ingredient"><%= ingredient.name %> |
-     amount: <%= ingredient.amount %>
-     <%= ingredient.measurement %>
-      <%end%>
+  <div class="rex well well-lg">
+  <h1> Ingredients </h1>
+    <% @recipe.ingredients.each do |ingredient| %>
+       <div class="individual_ingredient"><%= ingredient.name %> |
+       amount: <%= ingredient.amount %>
+       <%= ingredient.measurement %>
+        <%end%>
+  </div>
+  <br><br>
+  <br><br>
+  <br><br>
+  <br><br>
+  </div>
+  </div>
+
+  <div class="dir well well-lg">
+  <h1> Directions </h1>
+  <ol>
+    <% @recipe.directions.each do |direction| %>
+       <li><div class="individual_direction"><%= direction.body %>
+        <%end%>
+  </ol>
 </div>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-</div>
-</div>
 
-<div class="dir well well-lg">
-<h1> Directions </h1>
-<ol>
-  <% @recipe.directions.each do |direction| %>
-     <li><div class="individual_direction"><%= direction.body %>
-      <%end%>
-</div>
 
-</ol>
 
 
