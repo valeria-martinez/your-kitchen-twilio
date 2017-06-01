@@ -4,7 +4,7 @@
 
 #cat_header {
   width: 90%;
-  margin-left: 45px;
+
 }
 
 .individual_category {
@@ -29,6 +29,7 @@
   background-size: cover;
   opacity: 0.9;
   width: 960px;
+  text-align:center;
 }
 
 .well img {
@@ -37,16 +38,16 @@
   border-radius: 15px;
   border: 10px;
   padding: 10px;
-  align-items: center;
+
 }
 
 .well.well-lg {
   width: 250px;
-  height: 310px;
+  height: 330px;
   display: inline-block;
-  float: left;
   margin: 10px;
   text-align:center;
+  float: left;
 }
 
 #user-recipes {
