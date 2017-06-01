@@ -19,3 +19,24 @@ body {
   margin: auto;
   text-align: left;
 }
+
+
+#user-main {
+  padding: 50px;
+  background: #FF512F;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F09819, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F09819, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  position: absolute;
+  background-size: cover;
+  opacity: 0.9;
+  width: 960px;
+  text-align:center;
+}
+
+.user-link {
+  color: #696969;
+}
+
+.user-link:hover {
+  color: #B8B8B8;
+}
